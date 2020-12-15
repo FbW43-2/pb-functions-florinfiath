@@ -58,20 +58,37 @@ console.log("Add Up________________________________________")
 /* Create a function that takes an integer as an argument. 
 Add up all the integers from 1 to the integer you passed to the function.
 For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
- Examples:
+Examples:
 sumIntFrom1ToN(4) ➞ 10
 sumIntFrom1ToN(13) ➞ 91
 sumIntFrom1ToN(600) ➞ 180300 */
 
+ function AddUp(num){
+   console.log (`The result for ${num} is ${num * (num+1) / 2}`)
+
+ }
+  AddUp(4);
+  AddUp(13);
+  AddUp(600);
+ 
 console.log("Cubed_________________________________________")
 // Cubed
 // Create a function that takes in three numbers and returns the sum of its cubes.
 // Examples:
 
+function Cube(num1, num2, num3) {
+    var Number1 = exponent(num1, 3);
+    var Number2 = exponent(num2, 3);
+    var Number3 = exponent(num3, 3);
+    console.log(`The sum of cubes of ${num1}, ${num2}, ${num3} is ${Number1 + Number2 + Number3}`)
+}
+Cube(2, 5, 7);
+
+
 
 console.log("String Check__________________________________")
 // String Check
-// umOfCubes(1, 5, 9) ➞ 855 // Since 1^3 + 5^3 + 9^3 = 1 + 125 + 729 = 855
+// sumOfCubes(1, 5, 9) ➞ 855 // Since 1^3 + 5^3 + 9^3 = 1 + 125 + 729 = 855
 // sumOfCubes(2) ➞ 8
 // 5TsumOfCubes() ➞ 0
 
