@@ -30,6 +30,11 @@ function ValidateVariableType(variable1,variable2) {
 ValidateVariableType(3, 5)
 ValidateVariableType("Florin", 5);
 
+// 2nd way isNaN
+  function areANumbers(num1, num2){
+   return (typeof num1 === "number") && (typeof num2 === "number")
+  }
+
 console.log("Exponent______________________________________")
 // Exponent
 
@@ -70,6 +75,16 @@ sumIntFrom1ToN(600) ➞ 180300 */
   AddUp(4);
   AddUp(13);
   AddUp(600);
+
+ // version 2
+ function sumUp(Num) {
+     var result = 0;
+     for (var i=1; i<= Num; i++) {
+         result += i; // result = result + i ;
+     }
+     return result;
+ }
+
  
 console.log("Cubed_________________________________________")
 // Cubed
@@ -77,24 +92,58 @@ console.log("Cubed_________________________________________")
 // Examples:
 
 function Cube(num1, num2, num3) {
-    var Number1 = exponent(num1, 3);
-    var Number2 = exponent(num2, 3);
-    var Number3 = exponent(num3, 3);
-    console.log(`The sum of cubes of ${num1}, ${num2}, ${num3} is ${Number1 + Number2 + Number3}`)
+    var sumOfCubes = (num1 * 3)+(num2 * 3)+(num3 * 3);
+    console.log(`The sum of cubes of ${num1}, ${num2}, ${num3} is ${sumOfCubes}`)
 }
-Cube(2, 5, 7);
+Cube(9, 8, 5);
+
+
 
 
 
 console.log("String Check__________________________________")
-// String Check
-// sumOfCubes(1, 5, 9) ➞ 855 // Since 1^3 + 5^3 + 9^3 = 1 + 125 + 729 = 855
-// sumOfCubes(2) ➞ 8
-// 5TsumOfCubes() ➞ 0
+// ? Create a function that takes a string and a word, and then returns true or false depending on whether the word starts with the initial string.
+
+function isStrStartOfWord(str, word){
+   for (var i = 0; i < word.length;i++) {
+       if (str[i] != word[i]) { 
+           return false;
+       }
+   }
+   return true;
+}
+console.log(isStrStartOfWord("Florin", "Florin"));
+console.log(isStrStartOfWord("Florin", "Flaus"));
+
 
 
 console.log("Less Than or Equal to Zero?___________________");
 // Less Than or Equal to Zero?
+//Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+
+function isLessOrEqualZero(n) 
+{
+    if (n <= 0) 
+    return true;
+    else return false
+}
+console.log(isLessOrEqualZero(-4));
+console.log(isLessOrEqualZero(1));
+console.log(isLessOrEqualZero(0));
+console.log(isLessOrEqualZero(3));
 
 console.log("Count Occurrences_____________________________");
 // Count Occurrences
+ //Create a function that accepts two arguments: a string and a letter. The function should count the number of occurrences of that letter in the string.
+
+ function countOccurrences(string,letter) {
+     let letterCount = 0 ;
+     for (let position = 0; position < string.length; position++) {
+         if (string.charAt(position) === letter)
+         {
+             letterCount += 1;
+         }
+     }
+     return letterCount;
+ }
+ console.log(countOccurrences("java script is a easy language", "a"));
